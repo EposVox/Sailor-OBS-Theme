@@ -7,6 +7,14 @@
 }
 
 @OBSThemeVars {
+	/* Sailor Moon Color Palette */
+	--sailorgold: #f4bf4d;
+	--sailorblue: #374f90;
+	--sailorlightblue: #6da2da;
+	--sailorwhite: #f4fbfb;
+	--sailorpink: #f4b1d0;
+	--sailoryellow: #E1BF17;
+	--sailorblack: #171717;
     /* OBS Color Palette */
     --blue1: #718CDC;
     --blue2: #476BD7;
@@ -61,9 +69,9 @@
     --grey4: #3C404D;
     --grey5: #323540;
     --grey6: #272A33;
-    --grey7: #29285E;
+
     --grey8: #13141A;
-	--sailoryellow: #E1BF17;
+	
     --white1: #FFFFFF;
     --white2: #EBEBEB;
     --white3: #D6D6D6;
@@ -77,8 +85,8 @@
     --black5: #5C5C5C;
 
     /* Base Theme Colors */
-    --bg_window: var(--grey7);
-    --bg_base: var(--twitchdark);
+    --bg_window: var(--sailorlightblue);
+    --bg_base: var(--sailorblue);
     --bg_preview: var(--grey8);
 
     --primary: var(--blue3);
@@ -90,7 +98,7 @@
     --warning: var(--yellow3);
     --danger: var(--red3);
 
-    --text: var(--white1);
+    --text: var(--sailorblack);
     --text_light: rgb(214,214,214);
     --text_muted: rgb(153,153,153);
 
@@ -142,7 +150,7 @@
     --scrollbar_size: 12px;
 
     /* Inputs / Controls */
-    --border_color: var(--sailoryellow);
+    --border_color: var(--sailorgold);
 
     --border_radius: 4px;
     --border_radius_small: 2px;
@@ -157,31 +165,31 @@
     --input_height: calc(var(--input_height_base) - calc(var(--input_padding) * 2));
     --input_height_half: calc(var(--input_height_base) / 2);
 
-    --input_bg: var(--twitchpurp);
-    --input_bg_hover: var(--grey7);
-    --input_bg_focus: var(--grey7);
+    --input_bg: var(--sailorpink);
+    --input_bg_hover: var(--sailorlightblue);
+    --input_bg_focus: var(--sailorlightblue);
 
     --list_item_bg_selected: var(--primary);
     --list_item_bg_hover: var(--primary_light);
 
     --input_border: var(--grey1);
-    --input_border_hover: var(--sailoryellow);
+    --input_border_hover: var(--sailorgold);
     --input_border_focus: var(--primary);
 
     --spacing_input: var(--spacing_base);
 
-    --button_bg: var(--input_bg);
-    --button_bg_hover: var(--sailoryellow);
-    --button_bg_down: var(--grey7);
-    --button_bg_disabled: var(--twitchgrey);
+    --button_bg: var(--sailorpink);
+    --button_bg_hover: var(--sailorgold);
+    --button_bg_down: var(--sailorblue);
+    --button_bg_disabled: var(--sailorblack);
 
     --button_border: var(--button_bg);
-    --button_border_hover: var(--sailoryellow);
+    --button_border_hover: var(--sailorgold);
     --button_border_focus: var(--grey1);
 
-    --tab_bg: var(--button_bg_disabled);
-    --tab_bg_hover: var(--button_bg_hover);
-    --tab_bg_down: var(--primary);
+    --tab_bg: var(--sailorblue);
+    --tab_bg_hover: var(--sailorpink);
+    --tab_bg_down: var(--sailorgold);
     --tab_bg_disabled: var(--button_bg_disabled);
 
     --tab_border: var(--border_color);
@@ -189,9 +197,9 @@
     --tab_border_focus: var(--button_border_focus);
     --tab_border_selected: var(--primary);
 
-    --scrollbar: var(--sailoryellow);
+    --scrollbar: var(--sailorgold);
     --scrollbar_hover: var(--grey3);
-    --scrollbar_down: var(--twitchdark);
+    --scrollbar_down: var(--sailorblue);
     --scrollbar_border: var(--grey2);
 
     --separator_hover: var(--white1);
@@ -204,22 +212,22 @@
     --palette_windowText: var(--text);
     --palette_base: var(--bg_base);
 
-    --palette_light: var(--grey2);
-    --palette_mid: var(--grey7);
-    --palette_dark: var(--twitchdark);
+    --palette_light: var(--sailorwhite);
+    --palette_mid: var(--sailorlightblue);
+    --palette_dark: var(--sailorblue);
 
     --palette_highlight: var(--primary);
     --palette_highlightedText: var(--text);
 
-    --palette_text: var(--text);
+    --palette_text: var(--sailorblack);
     --palette_link: var(--blue2);
     --palette_linkVisited: var(--blue2);
 
     --palette_button: var(--button_bg);
-    --palette_buttonText: var(--text);
+    --palette_buttonText: var(--sailorblack);
 
     /* They can be selectively set for palette groups by appending those as well */
-    --palette_text_active: var(--text);
+    --palette_text_active: var(--sailorblack);
     --palette_text_disabled: var(--text_disabled);
     --palette_text_inactive: var(--text_inactive);
 
@@ -240,7 +248,7 @@
 
 QWidget {
     alternate-background-color: var(--bg_base);
-    color: var(--text);
+    color: var(--sailorwhite);
     selection-background-color: var(--primary);
     selection-color: var(--text);
     font-size: var(--font_base);
@@ -312,7 +320,7 @@ QAbstractItemView {
 
 QToolTip {
     background-color: var(--bg_base);
-    color: var(--text);
+    color: var(--sailorwhite);
     border: none;
 }
 
@@ -352,7 +360,7 @@ QListWidget {
 }
 
 QListWidget::item {
-    color: var(--text);
+    color: var(--sailorwhite);
 }
 
 QListWidget,
@@ -381,13 +389,13 @@ SourceTreeItem,
 QMenu::item,
 SceneTree::item {
     border-radius: var(--border_radius);
-    color: var(--text);
+    color: var(--sailorwhite);
     border: 1px solid transparent;
 }
 
 SourceTree::item {
     border-radius: var(--border_radius);
-    color: var(--text);
+    color: var(--sailorwhite);
 }
 
 QMenu::item:selected,
@@ -406,7 +414,7 @@ QListWidget::item:selected:hover,
 SceneTree::item:selected:hover,
 SourceTree::item:selected:hover {
     background-color: var(--primary_light);
-    color: var(--text);
+    color: var(--sailorwhite);
 }
 
 QMenu::item:focus,
@@ -555,7 +563,7 @@ QGroupBox::title {
 /* ScrollBars */
 
 QScrollBar {
-    background-color: var(--twitchdark);
+    background-color: var(--sailorblue);
     margin: 0px;
     border-radius: var(--border_radius);
 }
@@ -752,7 +760,7 @@ QTabBar::tab:bottom {
 
 QTabBar::tab {
     background: var(--tab_bg);
-    color: var(--text);
+    color: var(--sailorwhite);
     border: none;
     padding: 8px 12px;
     min-width: 50px;
@@ -824,7 +832,7 @@ QDateTimeEdit:selected {
 QComboBox::drop-down,
 QDateTimeEdit::drop-down {
     border:none;
-    border-left: 1px solid var(--sailoryellow);
+    border-left: 1px solid var(--sailorgold);
     width: 32px;
 }
 
@@ -922,7 +930,7 @@ QDoubleSpinBox::up-button {
     subcontrol-position: top right; /* position at the top right corner */
 
     width: 32px;
-    border-left: 1px solid var(--twitchdark);
+    border-left: 1px solid var(--sailorblue);
     border-bottom: 1px solid transparent;
     border-radius: 0px;
     margin-top: -1px;
@@ -934,8 +942,8 @@ QDoubleSpinBox::down-button {
     subcontrol-position: bottom right; /* position at the top right corner */
 
     width: 32px;
-    border-left: 1px solid var(--twitchdark);
-    border-top: 1px solid var(--twitchdark);
+    border-left: 1px solid var(--sailorblue);
+    border-top: 1px solid var(--sailorblue);
     border-radius: 0px;
     margin-bottom: -1px;
 }
@@ -1146,7 +1154,7 @@ QPushButton::menu-indicator {
 /* Sliders */
 
 QSlider::groove {
-    background-color: var(--sailoryellow);
+    background-color: var(--sailorgold);
     border: none;
     border-radius: 2px;
 }
@@ -1165,27 +1173,27 @@ QSlider::sub-page:horizontal {
 }
 
 QSlider::sub-page:horizontal:disabled {
-    background-color: var(--sailoryellow);
+    background-color: var(--sailorgold);
     border-radius: 2px;
 }
 
 QSlider::add-page:horizontal:disabled {
-    background-color: var(--grey7);
+    background-color: var(--sailorlightblue);
     border-radius: 2px;
 }
 
 QSlider::add-page:vertical {
-    background-color: var(--blue2);
+    background-color: var(--sailorblue);
     border-radius: 2px;
 }
 
 QSlider::add-page:vertical:disabled {
-    background-color: var(--sailoryellow);
+    background-color: var(--sailorgold);
     border-radius: 2px;
 }
 
 QSlider::sub-page:vertical:disabled {
-    background-color: var(--grey7);
+    background-color: var(--sailorlightblue);
     border-radius: 2px;
 }
 
@@ -1868,7 +1876,7 @@ QDateTimeEdit::down-arrow {
 }
 
 QDateTimeEdit:on {
-    background-color: var(--grey7);
+    background-color: var(--sailorlightblue);
 }
 
 /* Calendar Top Bar */
@@ -1934,7 +1942,7 @@ QCalendarWidget QSpinBox::up-arrow { width: 10px; height: 10px; }
 QCalendarWidget QSpinBox::down-arrow { width: 10px; height: 10px; }
 
 /* Days of the Week Bar */
-QCalendarWidget QWidget { alternate-background-color: var(--grey7); }
+QCalendarWidget QWidget { alternate-background-color: var(--sailorlightblue); }
 
 QCalendarWidget QAbstractItemView:enabled {
     background-color: var(--bg_base);
